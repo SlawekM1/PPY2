@@ -501,7 +501,36 @@ These are fundamental constructs in Python programming that enable you to contro
 
   The program will generate the list of prime numbers up to 20, perform calculations, and write the results to 'prime_numbers.txt'.
 """
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
 
+
+largest_integer = 20  
+
+
+prime_numbers = [n for n in range(2, largest_integer + 1) if is_prime(n)]
+
+
+sum_of_primes = sum(prime_numbers)
+largest_prime = max(prime_numbers)
+smallest_prime = min(prime_numbers)
+is_largest_integer_prime = is_prime(largest_integer)
+
+
+prime_numbers_file_path = '/mnt/data/prime_numbers.txt'
+with open(prime_numbers_file_path, 'w') as file:
+    file.write(f"List of prime numbers up to {largest_integer}: {prime_numbers}\n")
+    file.write(f"Sum of all prime numbers: {sum_of_primes}\n")
+    file.write(f"Largest prime number: {largest_prime}\n")
+    file.write(f"Smallest prime number: {smallest_prime}\n")
+    file.write(f"Is {largest_integer} a prime number? {'Yes' if is_largest_integer_prime else 'No'}\n")
+
+prime_numbers, sum_of_primes, largest_prime, smallest_prime, is_largest_integer_prime, prime_numbers_file_path
 
 
 """10.
