@@ -117,7 +117,8 @@ Extend the previous Python program to demonstrate the manipulation of lists usin
 input_numbers = input("Enter a series of space-separated integers: ")
 
 # Convert Input
-
+numbers_list = [int(item) for item in input_numbers.split()]
+numbers_tuple = tuple(numbers_list)
 
 # Manipulate List
 #   Append 10 to the list
@@ -137,6 +138,11 @@ try:
     #   Remove one element  from the tuple
 except AttributeError:
     pass  # Remove operation will also raise an error
+
+numbers_list.append(10)
+numbers_list.insert(2, 20)
+numbers_list.remove(8)
+
 
 # Print Output
 print("Modified list:", numbers_list)
