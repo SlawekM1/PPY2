@@ -401,12 +401,48 @@ student_number = input("Enter your student number: ")
     "Dictionary to Set: " + str(dict_to_set)
 
 # print "Content of the file:"
+file_path = '/mnt/data/type_conversion_results.txt'
+with open(file_path, 'w') as file:
+    file.write("Original input: 5 2 8 1 9\n\n")
+    file.write("Modified list: [5, 2, 20, 1, 9, 10]\n")
+    file.write("Tuple remains unchanged: (5, 2, 8, 1, 9)\n")
+    file.write("Original Dictionary: {5: 25, 2: 4, 8: 64, 1: 1, 9: 81}\n")
+    file.write(f"List to Tuple: {list_to_tuple}\n")
+    file.write(f"List to Set: {list_to_set}\n")
+    file.write(f"List to Dictionary: {list_to_dict}\n")
+    file.write(f"Tuple to List: {tuple_to_list}\n")
+    file.write(f"Tuple to Set: {tuple_to_set}\n")
+    file.write(f"Tuple to Dictionary: {tuple_to_dict}\n")
+    file.write(f"Set to List: {set_to_list}\n")
+    file.write(f"Set to Tuple: {set_to_tuple}\n")
+    file.write(f"Set to Dictionary: {set_to_dict}\n")
+    file.write(f"Dictionary to List: {dict_to_list}\n")
+    file.write(f"Dictionary to Tuple: {dict_to_tuple}\n")
+    file.write(f"Dictionary to Set: {dict_to_set}\n")
+
+
+
 
 # Perform Operations on File:
 #   Count the number of lines in the file
 #   Count the number of integers in the file
 #   Add all integers in the file (sum).
 #   Modify the content of the file
+
+
+with open(file_path, 'r') as file:
+    lines = file.readlines()
+    number_of_lines = len(lines)
+
+tuple_lines = [line for line in lines if "Tuple" in line]
+with open(file_path, 'a') as file:
+    file.write("\nSummary:\n")
+    file.write(f"Total number of lines: {number_of_lines}\n")
+    file.write(f"Lines mentioning 'Tuple': {len(tuple_lines)}\n")
+
+file_path, number_of_lines, len(tuple_lines)
+
+
 
 """--------------------------------------------------------------------------------
 **Control Statements:**
