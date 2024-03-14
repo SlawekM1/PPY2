@@ -26,20 +26,24 @@ Write a Python program that takes input from the user to create a list of intege
   Sorted list: [1, 2, 5, 8, 9]
   ```
 """
-
+//task3
 # Input
 input_numbers = input("Enter a series of space-separated integers: ")
 
 # Convert Input:
-
-
+integer_list = [int(item) for item in user_input.split()]
 # Sorting:
-
+integer_list.sort()
 
 # Print Output
-print("Sorted list:", numbers_list)
+sorted_list = integer_list
+sorted_list
+
 
 """-----------------------------------------------------------------------------
+
+
+
 
 Difference between Lists and Tuples:
 
