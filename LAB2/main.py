@@ -74,17 +74,20 @@ Extend the previous Python program to include tuples. Now, in addition to creati
   ```
 """
 
+
 # Input
 input_numbers = input("Enter a series of space-separated integers: ")
 
 # Convert Input:
-
+integer_list = [int(item) for item in user_input.split()]
+integer_tuple = tuple(integer_list)
 
 # Sorting:
-
+sorted_list = sorted(integer_list)
+sorted_tuple = tuple(sorted(integer_tuple))
 
 # Print Output
-print("Sorted list:", numbers_list)
+print("Sorted list:", sorted_list)
 print("Sorted tuple:", sorted_tuple)
 
 """5.
