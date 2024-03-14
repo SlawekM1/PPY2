@@ -224,10 +224,19 @@ except AttributeError:
 # Intersection
 # Difference
 
+union_set = original_set.union(new_set)
+intersection_set = original_set.intersection(new_set)
+difference_set = original_set.difference(new_set)
+
+
 # Dictionary Operations
 print("Original Dictionary:", numbers_dict)
 # Add a new key-value pair
 # Delete an existing key-value pair
+
+numbers_dict = {number: number**2 for number in numbers_list if number in original_set} 
+numbers_dict[11] = 11**2
+numbers_dict.pop(8, None)
 
 # Print Output
 print("Modified list:", numbers_list)
@@ -295,18 +304,18 @@ print("Original Dictionary:", numbers_dict)
 # Delete an existing key-value pair
 
 # Type Conversion
-# list_to_tuple =
-# list_to_set =
-# list_to_dict =
-# tuple_to_list =
-# tuple_to_set =
-# tuple_to_dict =
-# set_to_list =
-# set_to_tuple =
-# set_to_dict =
-# dict_to_list =
-# dict_to_tuple =
-# dict_to_set =
+# list_to_tuple =tuple(numbers_list)
+# list_to_set =set(numbers_list)
+# list_to_dict ={num: num**2 for num in numbers_list}
+# tuple_to_list =list(numbers_tuple)
+# tuple_to_set =set(numbers_tuple)
+# tuple_to_dict ={num: num**2 for num in numbers_tuple}
+# set_to_list =list(original_set)
+# set_to_tuple =tuple(original_set)
+# set_to_dict = {num: num**2 for num in original_set}
+# dict_to_list =list(numbers_dict.keys())
+# dict_to_tuple =tuple(numbers_dict.keys())
+# dict_to_set =set(numbers_dict.keys())
 
 # Print Output
 print("List to Tuple:", list_to_tuple)
